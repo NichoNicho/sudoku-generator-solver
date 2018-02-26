@@ -1,0 +1,117 @@
+body{
+  background-color: #e0ebeb;
+}
+
+h1{
+  text-align: center;
+  color: orange;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left:auto;
+  margin-right:auto;
+  border: 3px dashed orange;
+}
+
+th, td {
+  padding: 20px;
+  border: 2px solid yellow;
+  color: blue;
+  font-weight: bold;
+}
+
+/* first square */
+tr:nth-child(-n+3) td:nth-child(n+1) {
+    background: #e6ccff !important;
+}
+
+/* second square */
+tr:nth-child(-n+3) td:nth-child(n+4) {
+    background: #ccccff !important;
+}
+
+/* third square */
+tr:nth-child(-n+3) td:nth-child(n+7) {
+    background: #e6ccff !important;
+}
+
+/* fourth square */
+tr:nth-child(n+4) td:nth-child(-n+3) {
+    background: #ccccff !important;
+}
+
+/*fifth square*/
+tr:nth-child(n+4) td:nth-child(n+4) {
+    background: #e6ccff !important;
+}
+
+/* sixth square */
+tr:nth-child(n+4) td:nth-child(n+7) {
+    background: #ccccff !important;
+}
+
+/* 7th square */
+tr:nth-child(n+7) td:nth-child(n+1) {
+    background: #e6ccff !important;
+}
+/* 8th square */
+tr:nth-child(n+7) td:nth-child(n+4) {
+    background: #ccccff !important;
+}
+/* 9th square */
+tr:nth-child(n+7) td:nth-child(n+7) {
+    background: #e6ccff !important;
+}
+
+/*button*/
+.sub-main{
+  width: 30%;
+  margin:22px;
+  float: left;
+}
+
+.button{
+    position: fixed;
+    background-color: #ccccff;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size:24px;
+    margin: 0 0 0 100px;
+    top:0;
+    left:0;
+    color:white;
+}
+
+.button:hover{
+   background:#e6ccff;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color:blue;
+}
+
+.button:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}

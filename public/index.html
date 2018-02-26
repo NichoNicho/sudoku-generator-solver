@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Sudoku Generator and solver</title>
+      <meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+		 <h1> Sudoku Generator</h1>
+		 <div id="puzzle"></div>
+     <div class="sub-main">
+      <button class="button" onclick="puzzleClicked()" style="top:60px;">Generarte</button>
+      <button class="button" onclick="solClicked()" style="top:260px;">Solution</button>
+     </div>
+		 <script src="/socket.io/socket.io.js"></script>
+		 <script>
+			 var socket = io.connect();
+
+			 function puzzleClicked(){
+			   socket.emit('puzzClicked');
+			 }
+
+       function solClicked(){
+			   socket.emit('solClicked');
+			 }
+			 //when we receive numClients, do this
+			 socket.on('puzzleUpdate', function(data){
+				 document.getElementById("puzzle").innerHTML =  data;
+			 });
+
+       socket.on('solUpdate', function(data){
+         document.getElementById("puzzle").innerHTML =  data;
+       });
+
+		</script>
+   </body>
+</html>
