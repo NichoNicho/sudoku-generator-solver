@@ -1,7 +1,6 @@
 # sudoku generator and solver
 
 ## Getting Started
-
 After download "npm i"
 
 ### Run
