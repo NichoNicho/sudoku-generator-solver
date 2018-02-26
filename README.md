@@ -1,8 +1,11 @@
-# sudoku-generator-solver
+# sudoku generator and solver
 
+## Getting Started
 
-after downloading
-npm i
+After download "npm i"
 
-run: npm start
-test: npm test
+### Run
+npm start
+
+### test
+npm test
