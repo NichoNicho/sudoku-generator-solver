@@ -10,7 +10,7 @@ createTable: function (myArray) {
           if(myArray[i][j]!==0){
             result += "<td>"+myArray[i][j]+"</td>";
           }else{
-            result += "<td></td>";
+            result += "<td><input></td>";
           }
       }
       result += "</tr>";
